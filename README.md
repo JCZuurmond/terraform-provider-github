@@ -20,7 +20,7 @@ API](https://docs.github.com/en/rest) written in Go.
 - [provider for Github](github/provider.go)
 - [organizations data source](github/data_source_organizations.go)
 
-# Local installation
+# Installation
 First install [Go](https://golang.org/doc/install). Then install the provider:
 
 ``` bash
@@ -42,7 +42,7 @@ Run `plan`:
 terraform -chdir=terraform/ plan
 ```
 
-# Local development
+# Development
 To validate changes with the example.  Run Terraform `init`:
 
 ``` bash
