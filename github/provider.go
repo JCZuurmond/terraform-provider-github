@@ -21,7 +21,9 @@ func Provider() *schema.Provider {
 				DefaultFunc: schema.EnvDefaultFunc("GITHUB_TOKEN", nil),
 			},
 		},
-		ResourcesMap: map[string]*schema.Resource{},
+		ResourcesMap: map[string]*schema.Resource{
+			"github_repository": resourceRepository(),
+		},
 		DataSourcesMap: map[string]*schema.Resource{
 			"github_organizations": dataSourceOrganizations(),
 		},

@@ -15,6 +15,12 @@ module "orgs" {
   login = "gumgum"
 }
 
+resource "github_repository" "foo" {
+  name = "foobar"
+  private = true
+  organization = "terrafoo"
+}
+
 output "organization" {
   value = module.orgs.organization
 }
