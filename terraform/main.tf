@@ -18,3 +18,7 @@ module "orgs" {
 output "organization" {
   value = module.orgs.organization
 }
+
+output "all_organizations" {
+  value = module.orgs.all_organizations
+}
