@@ -17,6 +17,27 @@ providers.
 The provider is a Terraform wrapper around the [Github
 API](https://docs.github.com/en/rest) written in Go.
 
-We start with the two most commonly used endpoints:
-- [repository](https://docs.github.com/en/rest/reference/repos)
-- [users](https://docs.github.com/en/rest/reference/users)
+- [provider for Github](github/provider.go)
+- [organizations data source](github/data_source_organizations.go)
+
+# Local installation
+First install [Go](https://golang.org/doc/install). Then install the provider:
+
+``` bash
+make install
+```
+
+Notice that a `hashicorp.com/edu/github` provider will be installed in your
+Terraform plugins.
+
+To validate the install worked, use the example.  Run Terraform `init`:
+
+``` bash
+terraform -chdir=terraform/ init
+```
+
+Run `plan`:
+
+``` bash
+terraform -chdir=terraform/ plan
+```
