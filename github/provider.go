@@ -39,11 +39,7 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 		)
 		tc := oauth2.NewClient(ctx, ts)
 
-		client, err := github.NewClient(tc)
-
-		if err != nil {
-			return nil, diag.FromErr(err)
-		}
+		client := github.NewClient(tc)
 
 		// list all repositories for the authenticated user
 		repos, _, err := client.Repositories.List(ctx, "", nil)
