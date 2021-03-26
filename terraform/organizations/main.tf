@@ -14,7 +14,7 @@ variable "login" {
 
 data "github_organizations" "all" {}
 
-output "all_coffees" {
+output "all_organizations" {
   value = data.github_organizations.all.organizations
 }
 
