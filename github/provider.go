@@ -17,7 +17,7 @@ func Provider() *schema.Provider {
 		Schema: map[string]*schema.Schema{
 			"token": &schema.Schema{
 				Type:        schema.TypeString,
-				Optional:    false,
+				Optional:    true,
 				Sensitive:   true,
 				DefaultFunc: schema.EnvDefaultFunc("GITHUB_TOKEN", nil),
 			},
