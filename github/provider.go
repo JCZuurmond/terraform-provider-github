@@ -23,7 +23,7 @@ func Provider() *schema.Provider {
 		},
 		ResourcesMap:   map[string]*schema.Resource{},
 		DataSourcesMap: map[string]*schema.Resource{
-			"organizations": dataSourceOrganizations(),
+			"github_organizations": dataSourceOrganizations(),
 		},
 		ConfigureContextFunc: providerConfigure,
 	}
