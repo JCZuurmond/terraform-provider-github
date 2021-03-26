@@ -2,7 +2,6 @@ package github
 
 import (
 	"context"
-	"fmt"
 
 	"golang.org/x/oauth2"
 
@@ -41,10 +40,6 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 		tc := oauth2.NewClient(ctx, ts)
 
 		client := github.NewClient(tc)
-
-		// list all repositories for the authenticated user
-		repos, _, _ := client.Repositories.List(ctx, "", nil)
-		fmt.Print(repos)
 
 		return client, diags
 	}
