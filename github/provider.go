@@ -21,7 +21,7 @@ func Provider() *schema.Provider {
 				DefaultFunc: schema.EnvDefaultFunc("GITHUB_TOKEN", nil),
 			},
 		},
-		ResourcesMap:   map[string]*schema.Resource{},
+		ResourcesMap: map[string]*schema.Resource{},
 		DataSourcesMap: map[string]*schema.Resource{
 			"github_organizations": dataSourceOrganizations(),
 		},
@@ -35,7 +35,7 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 	// Warning or errors can be collected in a slice type
 	var diags diag.Diagnostics
 
-	if (token != "") {
+	if token != "" {
 		ctx := context.Background()
 		ts := oauth2.StaticTokenSource(
 			&oauth2.Token{AccessToken: token},
