@@ -41,3 +41,16 @@ Run `plan`:
 ``` bash
 terraform -chdir=terraform/ plan
 ```
+
+# Local development
+To validate changes with the example.  Run Terraform `init`:
+
+``` bash
+terraform -chdir=terraform/ init -upgrade=true
+```
+
+Run `plan`:
+
+``` bash
+terraform -chdir=terraform/ plan
+```
